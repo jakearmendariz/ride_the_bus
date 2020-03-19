@@ -17,12 +17,11 @@ def inside_or_out(val1, val2, val3):
     return 1
 
 
-def scatterPlot(result):
+def scatterPlot(result, title):
     xvalues = np.arange(len(result))
     df = pd.DataFrame({'Number of drinks': xvalues, 'probability': result})
     df.replace(0, np.nan).plot('Number of drinks', 'probability',
-                               kind='scatter', title='The Perfect Game')
-    plt.show()
+                               kind='scatter', title=title)
 
 
 def graphline(result, label):

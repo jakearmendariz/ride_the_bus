@@ -21,8 +21,10 @@ for i in range(50):
     mean += val*i
     mean_perfect += perfect[i]*i
 
-graphline(result, 'Best Guess Results')
-graphline(perfect, 'Pefect Game Results')
+#graphline(result, 'Best Guess Results')
+#graphline(perfect, 'Pefect Game Results')
+scatterPlot(result, 'Best Guess')
+scatterPlot(perfect, "Counting Cards")
 plt.show()
 print('average:', mean)
 print('average_perfect:', mean_perfect)
