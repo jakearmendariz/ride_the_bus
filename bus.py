@@ -129,6 +129,9 @@ def play_perfectly():
                 continue
         #print('guessed correct, card2:', card2.value)
         # Attempt 3, inside or outside, guesses inside if gap is greater than 6)
+        # Counts the options BEFORE drawing card3
+        guess = deck.guessInOut(card1.value, card2.value)
+        # print('In-Out guess:', guess)
         card3 = deck.draw_card()
         #print('card3:', card3.value)
         actual = inside_or_out(card1.value, card2.value, card3.value)
@@ -137,16 +140,13 @@ def play_perfectly():
             # If cards match continute
             continue
 
-        # Counts the options
-        guess = deck.guessInOut(card1.value, card2.value)
-        # print('In-Out guess:', guess)
         # Compare the actual to the reality
         if actual != guess:
             continue
         #print('guessed correct, card3:', card3.value)
 
-        card4 = deck.draw_card()
         guess = deck.guessType()
+        card4 = deck.draw_card()
         #print('Type guess', guess)
         #print('card4.type:', card4.type)
         if(guess == card4.type):

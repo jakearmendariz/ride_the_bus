@@ -77,6 +77,3 @@ class Deck:
     def printDeck(self):
         for card in self.deck:
             card.print_card()
-
-
-L
