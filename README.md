@@ -35,3 +35,5 @@ main.py
 
 Problem:
 - The play_memory_less() strategy works better than play_perfectly(). I do not understand exactly why this happens, but its very interesting. On average p_m_l() takes 13 drinks and p_p() is 16 drinks. I have checked everyline and I believe it is correct, just that in this situation the perfect solution of counting cards isn't the optimal one.
+
+(2026 correction): The bug was fixed, it was just that the perfect solution was making suboptimial gusses by drawing before the guess. So it lost its advantage by making the guess after the diff was removed. Once that was changed, perfect jumped to 11! Just a change on guess 3 and 4. Wow! 5 drinks difference, very cool.
